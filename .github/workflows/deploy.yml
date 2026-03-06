@@ -40,7 +40,7 @@ jobs:
             YEAR_DIR=$(dirname "$CSV")
             YEAR=$(basename "$YEAR_DIR")
 
-            HTML_COUNT=$(find "$YEAR_DIR" -maxdepth 1 -name "*.html" | wc -l)
+            HTML_COUNT=$(find "$YEAR_DIR" -maxdepth 1 -name "*.html" ! -name "index.html" | wc -l)
             if [ "$HTML_COUNT" -eq 0 ]; then
               echo "Skipping $YEAR — no result files yet"
               continue
