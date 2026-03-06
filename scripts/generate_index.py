@@ -10,6 +10,8 @@ OUTPUT_FILE = "index.html"
 PAGE_TITLE = "Directory Listing"
 # List of directory names to exclude from indexing.
 EXCLUDE_DIRS = ['.git', 'scripts', 'assets', 'resources', 'css', '2022']
+# List of filenames to exclude from directory listings.
+EXCLUDE_FILES = ['CLAUDE.md', 'README.md', 'CNAME', '.gitignore', 'last_updated.txt']
 
 CSS_URL = "https://css.gpsaswimming.org/gpsa-tools-common.css"
 
@@ -80,8 +82,8 @@ def generate_index_for_single_directory(current_path, subdirs, files, repo_root)
         # Combine subdirectories and files, then sort alphabetically
         all_items = sorted(subdirs + files, key=str.lower)
 
-        # Filter out the index.html file itself from the list
-        all_items = [item for item in all_items if item != OUTPUT_FILE]
+        # Filter out index.html and repo management files
+        all_items = [item for item in all_items if item != OUTPUT_FILE and item not in EXCLUDE_FILES]
 
         # Start building the HTML content with GPSA branding
         html_content = f"""<!DOCTYPE html>

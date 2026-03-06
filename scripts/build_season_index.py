@@ -649,9 +649,9 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python build_archive.py -i results/2025
-  python build_archive.py -i results/2025 -o results/2025
-  python build_archive.py -i ../2024_results -o ./output --verbose
+  python build_season_index.py -i results/2025
+  python build_season_index.py -i results/2025 -o results/2025
+  python build_season_index.py -i ../2024_results -o ./output --verbose
 
 The script automatically detects:
   - Season year from meet filenames

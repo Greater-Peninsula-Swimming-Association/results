@@ -6,7 +6,7 @@ Python scripts for building and maintaining the GPSA results archive.
 
 ## Scripts
 
-### build_archive.py — Season Archive Generator
+### build_season_index.py — Season Archive Generator
 
 Generates a season archive `index.html` from individual dual meet result files. Automatically detects teams and divisions, and produces a responsive standings + schedule page.
 
@@ -20,13 +20,13 @@ pip install beautifulsoup4
 
 ```bash
 # From repo root
-python scripts/build_archive.py -i 2025 -o 2025
+python scripts/build_season_index.py -i 2025 -o 2025
 
 # With verbose logging
-python scripts/build_archive.py -i 2025 -o 2025 --verbose
+python scripts/build_season_index.py -i 2025 -o 2025 --verbose
 
 # Non-interactive (requires divisions.csv)
-python scripts/build_archive.py -i 2025 -o 2025 --non-interactive
+python scripts/build_season_index.py -i 2025 -o 2025 --non-interactive
 ```
 
 #### Arguments
@@ -67,7 +67,7 @@ Division names are lowercase: `red`, `white`, `blue`. Use filename abbreviations
 
 #### Updating Team Mappings
 
-When teams change names or new teams join, update these maps in `build_archive.py`:
+When teams change names or new teams join, update these maps in `build_season_index.py`:
 
 ```python
 TEAM_NAME_MAP          # Full name → abbreviation
