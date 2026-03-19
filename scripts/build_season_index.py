@@ -19,7 +19,7 @@ TEAM_NAME_MAP = {
     "Coventry Sailfish Swim Team": "CV",
     "Elizabeth Lake Tideriders": "EL",
     "George Wythe Wahoos": "GWRA",
-    "Wythe Wahoos": "GWRA",
+    "Wythe Wahoos": "WYTHE",
     "Glendale Gators": "GG",
     "Hidenwood Tarpons": "HW",
     "James River Country Club": "JRCC",
